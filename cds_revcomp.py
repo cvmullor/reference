@@ -6,7 +6,7 @@
 # 		python3 cds_revcomp.py <CDS multi-fasta>
 #
 # Input: multi-fasta file with CDSs; last character of header string is
-#	'+' or '-' (strand), according to annotation files used for extracting CDSs [/from Prokka (.gff?)].
+#	'+' or '-' (strand), according to annotation files used for extracting CDSs.
 # Output: multi-fasta file with reverse complement of minus strand sequences,
 #	the remaining CDS are not modified.
 
