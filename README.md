@@ -4,7 +4,7 @@ Overview of the code used in Valiente-Mullor C et al. One is not enough: on the 
 
 The workflow is summarized in the Figure below (Fig 1).
 ![Fig 1](Fig1_overview.png)
-![Fig 1](Fig1_overview.png?raw=true)
+
 
 `remove_adaptors.sh`: removes adaptors from raw reads.
 
