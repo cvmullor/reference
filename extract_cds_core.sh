@@ -1,6 +1,7 @@
 #! /bin/bash
 
-# Extract and concatenate core CDS from consensus sequences
+# Extract and concatenate core CDS from consensus sequences obtained from
+# 	mappings against the same reference genome
 # Written by Carlos Valiente-Mullor, 2019
 #
 # Usage:
