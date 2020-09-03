@@ -7,7 +7,7 @@ The workflow is summarized in ![Fig 1](Fig1_overview.tif)
 ![Fig 1](Fig1_overview.tif?raw=true)
 
 <p>
-    <img src="Fig1_overview.tif" width="220" height="240" />
+    <img src="https://github.com/cvmullor/reference/blob/master/Fig1_overview.tif" />
 </p>
 
 
