@@ -18,7 +18,7 @@ The workflow is summarized in Fig 1:
 
 `xmfa_complement.py`: complements a XMFA-formatted MSA of reference sequences with consensus sequences associated with one of these references.
 
-`gaps_xmfa.py`: add gaps to regions of a XMFA-formatted MSA where homologous sequences were absent in any genome. 
+`gaps_xmfa.py`: adds gaps to regions of a XMFA-formatted MSA where homologous sequences are absent in any genome. 
 
 `mask_msa.py`: removes columns with gaps in the sequences specified by the user. It was used for (a) removing positions that were absent in the sequence that reads were mapped to and (b) to remove all positions with gaps, thus obtaining a "core" MSA.
 
