@@ -4,7 +4,7 @@ Overview of the code used in Valiente-Mullor C et al. One is not enough: on the 
 
 The workflow is summarized in the Figure below (Fig 1).
 ![Fig 1](Fig1_overview.tif)
-![Fig 1](https://github.com/cvmullor/reference/blob/master/Fig1_overview.tif)
+![Fig 1](Fig1_overview.tif?raq=true)
 
 `remove_adaptors.sh`: removes adaptors from raw reads.
 `trim_filter.sh`: quality filtering and trimming of raw reads.
