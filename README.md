@@ -12,18 +12,18 @@ The workflow is summarized in Fig 1:
 
 `mapsort.sh`: read mapping against each reference of the same species.
 
-`nsnp.sh`, `covered.sh` and `coverage.sh`: obtain different mapping parameters (number of SNPs, percentage of reference covered by reads and average coverage of the reference, respectively).
-
 `consensus.sh`: calls variants and computes the consensus sequence for each mapping.
 
-`xmfa_complement.py`: Complements an XMFA-formatted MSA of reference sequences with consensus sequences associated with one of these references.
+`nsnp.sh`, `covered.sh` and `coverage.sh`: obtain different mapping parameters (number of SNPs, percentage of reference covered by reads and average coverage of the reference, respectively).
+
+`xmfa_complement.py`: complements an XMFA-formatted MSA of reference sequences with consensus sequences associated with one of these references.
 
 `mask_msa.py`: removes columns with gaps in the sequences specified by the user. It was used for (a) removing positions that were absent in the sequence that reads were mapped to and (b) to remove all positions with gaps, thus obtaining a "core" MSA.
 
-`ml_trees.sh`: builds maximum likelihood phylogenies (IQ-TREE) from each final MSA after removing columns with gaps.
+`ml_trees.sh`: builds maximum likelihood phylogenies (IQ-TREE) from each MSA.
 
-`congruence_test`: performs ELW tests (IQ-TREE) for MSAs against a set of tree topologies. It was used to assess the congruence between phylogenies that differed only in the genome chosen as reference for mapping.
+`congruence_test.sh`: performs ELW tests (IQ-TREE) for MSAs against a set of tree topologies. It was used to assess the congruence between phylogenies that differed only in the genome chosen as reference for mapping.
 
-`extract_cds.sh` and `extract_cds_core.sh`: extract and concatenate CDSs from consensus sequences obtained from mappings against the same reference, considering all CDSs of the reference or only core genome, respectively. Outputs were used for dN/dS analyses.
+`extract_cds.sh` and `extract_cds_core.sh`: extract and concatenate CDSs of consensus sequences obtained from mappings against the same reference, considering all CDSs of the reference or only core genome, respectively. Outputs were used for dN/dS analyses.
 
-`cds_revcomp.py`: Makes reverse complement sequence from a CDS when necessary. Executed by the previous one.
+`cds_revcomp.py`: makes reverse complement sequence from a CDS when necessary. Executed by the previous one.
