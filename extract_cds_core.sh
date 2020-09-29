@@ -8,7 +8,7 @@
 #		./cds_extr-concat.sh <strain name>
 #
 # Required:
-#		mk_revcomp.py
+#		cds_revcomp.py
 #
 # CDS coordinates from reference sequences were obtained with Prokka
 # Annotation files were named with strain name and gff extension (e.g., FA_1090.gff)
@@ -48,8 +48,8 @@ ls cns/$strain/ \
 
 	rm cds.$sample.$strain.temp
 	
-	# Reverse complement of CDS with strand '-' (use python script mk_rvcomp.py)
-	python3 mk_revcomp_v1.py def.cds.$sample.$strain.fas
+	# Reverse complement of CDS with strand '-' (use custom python script cds_revcomp.py)
+	python3 cds_revcomp.py def.cds.$sample.$strain.fas
 	
 	# Concatenate all CDS of each consensus sequences in a single sequence
 	grep -v "^>" revcomp_def.cds.$sample.$strain.fas | awk -v head=$sample"."$strain 'BEGIN { ORS=""; print ">"head".CDS\n" } { print }' > finalcds_core.$sample.$strain.fas
