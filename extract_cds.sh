@@ -8,7 +8,7 @@
 #		./cds_extr-concat.sh <strain name>
 #
 # Required:
-#		mk_revcomp.py
+#		cds_revcomp.py
 #
 # CDS coordinates from reference sequences were obtained with Prokka
 # Annotation files were named with strain name and gff extension (e.g., FA_1090.gff)
