@@ -72,6 +72,6 @@ Path to the folder containing the reads (in fastq format) that will be mapped ag
 ### `-t` (threads) [optional]
 Number of threads that BWA MEM will use for mapping step. Default: 1
 
-## `-q` (quality control) [optional]
+### `-q` (quality control) [optional]
 Path to the file containing the adapters to be removed during read quality processing. Quality trimming and filtering will also be performed.
 If no file is provided, QC step will be skipped.
