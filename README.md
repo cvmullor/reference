@@ -78,3 +78,35 @@ Number of threads that BWA MEM will use for mapping step. Default: 1
 ### `-q` (quality control) [optional]
 Path to the file containing the adapters to be removed during read quality processing. Quality trimming and filtering will also be performed.
 If no file is provided, QC step will be skipped.
+
+## Description of scripts
+
+Usage is detailed in the header section of each script.
+
+`refeval_main.sh`: main script. Performs the main steps decribed in the work:
+  1) If specified, reads are filtered and trimmed.
+  2) Each sample is mapped to each reference, and variants are called and quality-filtered, then a consensus sequence is built from each mapping.
+  3) Mapping staistics are computed.
+  4) References and consensus sequences are aligned and the final multiple sequence alignments (MSAs) are masked.
+  5) Maximum likelihood phylogenies are inferred from each MSA and differences between trees are evaluated with congruence trests and topological distances.
+  6) CDS are extracted and pairwise dN/dS are calculates between consensus sequences from mappings against the same reference.
+  7) Recombination rates are calculated along the MSAs.
+  8) Plots are generated for each analyses/statistics.
+  9) To evaluate the significance of the differences depending on the reference genome, different tests are performed for the results of each analyses.
+
+`change_cns_header.py`: change consensus sequence headers to include sample name and reference strain.
+
+`xmfa_complement.py`: complements a XMFA-formatted MSA of reference sequences with consensus sequences associated with one of these references.
+
+`gaps_xmfa.py`: adds gaps to regions of a XMFA-formatted MSA where homologous sequences are absent in any genome. 
+
+`mask_msa.py`: removes columns with gaps in the sequences specified by the user. It was used for (a) removing positions that were absent in the sequence that reads were mapped to and (b) to remove all positions with gaps, thus obtaining a "core" MSA.
+
+`cds_revcomp.py`: makes reverse complement sequence from a CDS when necessary. Executed by the previous one.
+
+`rho_LDJump.R`: computes population recombination rates (rho) from an alignment in 1000pb windows.
+
+`plots.R`: make boxplots for number of SNPs, percentage of reference covered by reads, mean coverage and pairwise dN/dS values, and the distribution of rho along the alignments.
+
+`stats.R`: Get summary statistics of all the parameters. Perform Kruskal-Wallis and Wilcoxon tests (for mapping statsitics and dN/dS), and pairwise Kolmogorov-Smirnov tests (for rho distributions)
+
