@@ -5,6 +5,8 @@ The workflow is summarized in Fig 1:
 
 ## Options
 
+`refeval_main.sh` executes all the analyses carried out in this work.
+
 ### `-h` (help)
 ```
 Usage: ./refeval_main.sh [-hd] -r <path/to/references> -s <path/to/reads> [-t threads] [-q adapters_file]
