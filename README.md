@@ -3,9 +3,9 @@ Pipeline for the evaluation of the effect of reference choice on short-read mapp
 The workflow is summarized in Fig 1:
 ![Fig 1](Fig1_overview.png)
 
-# Options
+## Options
 
-## `-h` (help)
+### `-h` (help)
 ```
 Usage: ./refeval_main.sh [-hd] -r <path/to/references> -s <path/to/reads> [-t threads] [-q adapters_file]
 Options:
@@ -18,7 +18,7 @@ Options:
  -d       required dependencies and files
 ```
 
-## `-d` (required dependencies and files)
+### `-d` (required dependencies and files)
 ```
 Required software:
         bwa
@@ -63,13 +63,13 @@ Required files:
 All required programms should be in $PATH. The required scripts, as well as folders "ffn" and "gff" containing annotation files, should be placed in the same folder where `refeval_main.sh` is executed. 
 
 
-## `-r` (references)
+### `-r` (references)
 Path to the folder containing the reference sequences (in fasta/fna format) that will be used for read mapping.
 
-## `-s` (samples)
+### `-s` (samples)
 Path to the folder containing the reads (in fastq format) that will be mapped against the different references.
 
-## `-t` (threads) [optional]
+### `-t` (threads) [optional]
 Number of threads that BWA MEM will use for mapping step. Default: 1
 
 ## `-q` (quality control) [optional]
