@@ -74,11 +74,11 @@ function check_path {
     echo $path
 }
 
-function rm_adaptors {
+function rm_adapters {
     local readp=$1
     local adapfile=$2
 
-    # Remove adaptors
+    # Remove adapters
     ls $readp/*.fastq \
      | sed -e "s|$readp\/||g" \
      | awk '{ if ($1 ~ /R2/) {print $0"\n"} else {print $0" "}}' ORS="" \
@@ -691,7 +691,7 @@ fi
 if $isref && $issamp ; then
 	if $qc; then
 		echo -e "Performing QC\n"
-		rm_adaptors $readp $adapters
+		rm_adapters $readp $adapters
 		quality_control $readp $pprinseq
 	else
 		echo "Skipping QC"
