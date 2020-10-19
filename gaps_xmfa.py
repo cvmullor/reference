@@ -1,4 +1,4 @@
-# Add gaps to regions where homologous sequences were absent in any genome in
+# Add gaps to regions where homologous sequences are absent in any genome in
 #  a XMFA-formatted alignment
 #
 # Written by Carlos Valiente-Mullor, 2019
