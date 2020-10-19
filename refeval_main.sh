@@ -64,6 +64,7 @@ function print_required {
     echo "Required files:"
     echo -e "\tProkka annotation (FFN) of reference sequences"
     echo -e "\tProkka annotation (GFF) of reference sequences"
+    echo -e "\tcodeml.ctl"
     echo ""
 }
 
