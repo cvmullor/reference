@@ -10,11 +10,11 @@
 # Libraries
 library(ggplot2)
 
-# Mapstats
+
+# Mapstats (boxplots)
 myfile="mapstats/mapstats.tsv"
 mapst = read.table(myfile, header = T, sep = "\t")
 
-# -> boxplots
 png(filename = "SNPs.png", width = 7.5, height = 6.5, units = "in", res = 600)
 
 ggplot (mapst, aes(x=reference, y=SNPs)) + stat_boxplot(geom="errorbar", width=0.5) + geom_boxplot(fill="#E44446FF") + 
@@ -54,15 +54,15 @@ ggplot (mapst, aes(x=reference, y=`mean.coverage`)) + stat_boxplot(geom="errorba
 
 dev.off()
 
-# dN/dS
+
+# dN/dS (boxplot)
 file.ref=paste0("codeml_results/dnds.ref.tsv")
 file.core=paste0("codeml_results/dnds.core.tsv")
 
 dnds.ref = read.table(file.ref, header = T, sep = "\t")
 dnds.core = read.table(file.core, header = T, sep = "\t")
 
-# -> boxplots
-# --> CDSs from 1 ref
+# CDSs from 1 ref
 png(filename = "dnds.ref.png", width = 7.5, height = 6.5, units = "in", res = 600)
 
 ggplot (dnds.ref, aes(x=msa, y=omega)) + stat_boxplot(geom="errorbar", width=0.5) + geom_boxplot(fill="#E44446FF") + 
@@ -76,7 +76,7 @@ ggplot (dnds.ref, aes(x=msa, y=omega)) + stat_boxplot(geom="errorbar", width=0.5
 
 dev.off()
 
-# --> core CDSs
+# core CDSs
 png(filename = "dnds.core.png", width = 7.5, height = 6.5, units = "in", res = 600)
 
 ggplot (dnds.core, aes(x=msa, y=omega)) + stat_boxplot(geom="errorbar", width=0.5) + geom_boxplot(fill="#E44446FF") + 
@@ -95,7 +95,6 @@ dev.off()
 myfile = "ldjump_results/rho.tsv"
 rdata = read.table(myfile, header = T, sep = "\t")
 
-# -> plot
 g = ggplot(data = rdata, aes(x=segment, y=rate)) + 
   geom_line(aes(colour=msa), size = 0.3) +
   xlab("genome region") +
