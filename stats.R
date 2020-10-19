@@ -10,6 +10,7 @@
 # Libraries
 library(dplyr)
 
+
 # Read files (mapstats, dN/dS, recombination rates)
 myf.stats = "mapstats/mapstats.tsv"
 mstat = read.table(myf.stats, header = T, sep = "\t")
@@ -21,6 +22,7 @@ mcore = read.table(myf.dnds.core, header = T, sep = "\t")
 
 myf.recomb = "ldjump_results/rho.tsv"
 mrecomb = read.table(myf.recomb, header = T, sep = "\t")
+
 
 # Summary statistics
 sum.stats = group_by(mstat, reference) %>%
@@ -89,9 +91,9 @@ sum.stats = group_by(mrecomb, msa) %>%
   )
 write.csv(sum.stats, file = "summary.recomb_rate.csv", quote=F, row.names=F)
 
-# Kruskal-Wallis + Wilcoxon tests
 
-# -> dataframe
+# Kruskal-Wallis + Wilcoxon tests
+# dataframe
 row.params = c("SNPs", "per.ref.covered", "mean.coverage", "dNdS.ref", "dNdS.core" )
 col.test = c("Kruskal_Wallis.chi_squared", "df", "p.value")
 
@@ -100,7 +102,7 @@ kw = data.frame(matrix(ncol = 3, nrow = 5))
 colnames(kw) = col.test
 rownames(kw) = row.params
 
-# -> tests
+# tests
 res.kruskal = kruskal.test(SNPs ~ reference, data = mstat)
 kw["SNPs",] = c(res.kruskal$statistic[[1]], res.kruskal$parameter[[1]], res.kruskal$p.value)
 
@@ -141,12 +143,12 @@ if(res.kruskal$p.value[1] < 0.05) {
   write.csv(res.wilcox$p.value, file="wilcoxon.p_val.dNdS_core.csv", quote = F)
 }
 
-# -> save
+# save
 write.csv(kw, file = "test.kruskal-wallis.csv", quote=F, row.names=T)
 
 
 # Pairwise Kolmogorov-Smirnov test
-# -> function is available at: https://rdrr.io/github/netlify/NetlifyDS/src/R/pairwise_ks_test.R
+# function is available at: https://rdrr.io/github/netlify/NetlifyDS/src/R/pairwise_ks_test.R
 pairwise_ks_test <- function(value, group, n_min = 50, warning = 0, alternative = "two.sided" ){
   
   lev <- unique(group)
@@ -175,7 +177,7 @@ pairwise_ks_test <- function(value, group, n_min = 50, warning = 0, alternative 
   return(res)
 }
 
-# -> test
+# test
 value = mrecomb$rate
 group = mrecomb$msa
 ks = pairwise_ks_test(value, group, warning = -1)
