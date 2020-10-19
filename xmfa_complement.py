@@ -1,6 +1,5 @@
-# Obtain an XMFA alignment complemented by consensus sequences (fasta) associated
-#	with different reference sequences included in an XMFA alignment obtained
-# 	previously with progressiveMauve
+# Complement a XMFA-formatted MSA of reference sequences with consensus
+# 	sequences associated with one of these references
 #
 # Written by Ivan Ansari Toledano, 2019
 #
@@ -235,8 +234,6 @@ def main():
 	cnspath = fullpath + "/consensus_seqs/" + reference + "/"
 	emptypath = fullpath + "/consensus_seqs/empty/"
 
-	# List of references may be adapted to the number of reference genomes in
-	# 	the xmfa alignment of references
 	ref_list = []
 	for i in range(0,totalrefs):
 		pos = ref_pos - 1
