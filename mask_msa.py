@@ -1,4 +1,4 @@
-# Remove (mask) MSA columns with gaps in >=1 sequences defined by the user
+# Remove (mask) MSA columns with gaps in >=1 sequence(s) defined by the user
 #
 # Written by Carlos Valiente-Mullor, 2019
 #
