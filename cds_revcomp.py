@@ -1,4 +1,4 @@
-# Reverse complement of CDSs with strand '-'
+# Reverse complement of CDSs in minus strand
 #
 # Written by Carlos Valiente-Mullor, 2019
 #
