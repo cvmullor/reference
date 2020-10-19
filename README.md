@@ -96,17 +96,17 @@ Usage is detailed in the header section of each script.
 
 `change_cns_header.py`: change consensus sequence headers to include sample name and reference strain.
 
-`xmfa_complement.py`: complements a XMFA-formatted MSA of reference sequences with consensus sequences associated with one of these references.
+`xmfa_complement.py`: complement a XMFA-formatted MSA of reference sequences with consensus sequences associated with one of these references.
 
-`gaps_xmfa.py`: adds gaps to regions of a XMFA-formatted MSA where homologous sequences are absent in any genome. 
+`gaps_xmfa.py`: add gaps to regions of a XMFA-formatted MSA where homologous sequences are absent in any genome. 
 
-`mask_msa.py`: removes columns with gaps in the sequences specified by the user. It was used for (a) removing positions that were absent in the sequence that reads were mapped to and (b) to remove all positions with gaps, thus obtaining a "core" MSA.
+`mask_msa.py`: remove columns with gaps in the sequence(s) specified by the user.
 
-`cds_revcomp.py`: makes reverse complement sequence from a CDS when necessary. Executed by the previous one.
+`cds_revcomp.py`: make reverse complement sequence from a CDS if necessary.
 
-`rho_LDJump.R`: computes population recombination rates (rho) from an alignment in 1000pb windows.
+`rho_LDJump.R`: compute population recombination rates (rho values) along a MSA in 1000pb windows.
 
-`plots.R`: make boxplots for number of SNPs, percentage of reference covered by reads, mean coverage and pairwise dN/dS values, and the distribution of rho along the alignments.
+`plots.R`: make boxplots of number of SNPs, percentage of reference covered by reads, mean coverage and pairwise dN/dS values, and the distribution of rho along the MSAs.
 
-`stats.R`: Get summary statistics of all the parameters. Perform Kruskal-Wallis and Wilcoxon tests (for mapping statsitics and dN/dS), and pairwise Kolmogorov-Smirnov tests (for rho distributions)
+`stats.R`: get summary statistics of all the parameters. Perform Kruskal-Wallis and Wilcoxon tests (for mapping statsitics and dN/dS), and pairwise Kolmogorov-Smirnov tests (for rho distributions)
 
