@@ -23,11 +23,11 @@ if (length(args)==0) {
 strain = args[1] # strain name of the mapping reference
 fp = args[2]
 
-msafile=paste0(fp, "/complete_msa/masked_core.def.wgaps.xmfa_final.", strain, ".fasta")
+msafile=paste0(fp, "/complete_msa/masked_core.def.wgaps.xmfa_final.", strain, ".fasta") # MSA
 
 # Required
-ldhat = "/home/carlos/Documentos/softw/LDhat"
-phipack = "/home/carlos/Documentos/softw/PhiPack/Phi"
+ldhat = ""
+phipack = ""
 
 # Compute rho with LDJump
 rho = LDJump(msafile,
