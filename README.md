@@ -1,4 +1,4 @@
-# Evaluation of the effect of reference selection
+# Evaluation of the effect of reference choice on mapping
 Pipeline for the evaluation of the effect of reference choice on short-read mapping as performed in the work *One is not enough: on the effects of reference genome for the mapping and subsequent analyses of short-reads. BioRxiv [Preprint]. 2020*. Available from: [https://doi.org/10.1101/2020.04.14.041004](https://www.biorxiv.org/content/10.1101/2020.04.14.041004v1).
 
 `refeval_main.sh` executes all the analyses carried out in this work.
