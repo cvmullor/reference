@@ -86,7 +86,7 @@ def add_gaps(nseq, seqname_index, outfile):
 		with open(outfile, "a") as final:
 			for line in lall2:
 				final.write(line + "\n")
-	# Remove block files
+	# remove block files
 	for fa in glob.glob("*.fa"):
 		os.remove(fa)
 
