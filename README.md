@@ -61,9 +61,10 @@ Required R libraries:
 Required files:
         Prokka annotation (FFN) of reference sequences
         Prokka annotation (GFF) of reference sequences
+        codeml.ctl
 ```
 
-All required programms should be in $PATH. The required scripts, as well as folders "ffn" and "gff" containing annotation files and "codeml.ctl", should be placed in the same folder where `refeval_main.sh` is executed. 
+All required programs should be in $PATH. The required scripts, as well as folders "ffn" and "gff" containing annotation files and "codeml.ctl", should be placed in the same folder where `refeval_main.sh` is executed. 
 
 
 ### `-r` (references)
