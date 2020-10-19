@@ -84,15 +84,15 @@ If no file is provided, QC step will be skipped.
 Usage is detailed in the header section of each script.
 
 `refeval_main.sh`: main script. Performs the main steps decribed in the work:
-  1) If specified, reads are filtered and trimmed.
-  2) Each sample is mapped to each reference, and variants are called and quality-filtered, then a consensus sequence is built from each mapping.
-  3) Mapping staistics are computed.
-  4) References and consensus sequences are aligned and the final multiple sequence alignments (MSAs) are masked.
-  5) Maximum likelihood phylogenies are inferred from each MSA and differences between trees are evaluated with congruence trests and topological distances.
-  6) CDS are extracted and pairwise dN/dS are calculates between consensus sequences from mappings against the same reference.
-  7) Recombination rates are calculated along the MSAs.
-  8) Plots are generated for each analyses/statistics.
-  9) To evaluate the significance of the differences depending on the reference genome, different tests are performed for the results of each analyses.
+  1) If specified, low-quality reads are filtered and trimmed.
+  2) Map each sample to each reference, call and filter variants, and obtain a consensus sequence from each mapping.
+  3) Compute mapping statistics.
+  4) Align consensus and reference sequences and mask the final MSAs.
+  5) Infer phylogenetic trees from each MSA and evaluate topological similarity with congruence tests and tree distances.
+  6) Extract and concate CDSs to compute paiwise dN/dS values between consensus sequences obtained from mappings to the same reference.
+  7) Compute recombination rates along the MSAs.
+  8) Make plots of each parameter studied.
+  9) Get summary statistics of each parameter and test for significant differences depending on reference choice.
 
 `change_cns_header.py`: change consensus sequence headers to include sample name and reference strain.
 
