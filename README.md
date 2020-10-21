@@ -142,9 +142,9 @@ Usage is detailed in the header section of each script.
   1) If specified, low-quality reads are filtered and trimmed.
   2) Map each sample to each reference, call and filter variants, and obtain a consensus sequence from each mapping.
   3) Compute mapping statistics.
-  4) Align consensus and reference sequences and mask the final MSAs.
+  4) Align consensus and reference sequences, and mask the final MSAs.
   5) Infer phylogenetic trees from each MSA and evaluate topological similarity with congruence tests and tree distances.
-  6) Extract and concate CDSs to compute paiwise dN/dS values between consensus sequences obtained from mappings to the same reference.
+  6) Extract and concate CDSs to compute pairwise dN/dS values between consensus sequences obtained from mappings to the same reference.
   7) Compute recombination rates along the MSAs.
   8) Make plots of each parameter studied.
   9) Get summary statistics of each parameter and test for significant differences depending on reference choice.
