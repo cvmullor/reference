@@ -11,47 +11,44 @@ The workflow is summarized in Fig 1:
 The main script (`refeval_main.sh`) depends on different external dependencies. All required programs should be in $PATH. The required scripts, "codeml.ctl" file, and folders "ffn" and "gff" containing annotation files should be placed in the same directory where `refeval_main.sh` is executed.
 
 ### Required software
-*bwa
-*samtools
-*bcftools
-*progressiveMauve
-*IQ-tree
-*TreeCmp
-*Proteinortho
-*extractseq (EMBOSS package)
-*codeml (PAML package)
-*LDJump
-*LDhat
-*Phi (PhiPack)
+* bwa
+* samtools
+* bcftools
+* progressiveMauve
+* IQ-tree
+* TreeCmp
+* Proteinortho
+* extractseq (EMBOSS package)
+* codeml (PAML package)
+* LDJump
+* LDhat
+* Phi (PhiPack)
 
 ### Required scripts
 Python and R scripts are available at https://github.com/cvmullor/reference
 'xmfa2fasta.pl' is available at https://github.com/kjolley/seq_scripts
   
-*change_cns_header.py
-*xmfa_complement.py
-*gaps_xmfa.py
-*mask_msa.py
-*cds_revcomp.py
-*rho_LDJump.R
-*plots.R
-*stats.R
-*xmfa2fasta.pl
+* change_cns_header.py
+* xmfa_complement.py
+* gaps_xmfa.py
+* mask_msa.py
+* cds_revcomp.py
+* rho_LDJump.R
+* plots.R
+* stats.R
+* xmfa2fasta.pl
 
 ### Required Python libraries
-*Biopython
+* Biopython
 
 ### Required R libraries
-*ggplot2
-*dplyr
+* ggplot2
+* dplyr
 
 ### Required files
-*Prokka annotation (FFN) of reference sequences
-*Prokka annotation (GFF) of reference sequences
-*codeml.ctl
-
-
-
+* Prokka annotation (FFN) of reference sequences
+* Prokka annotation (GFF) of reference sequences
+* codeml.ctl
 
 ## Options
 
