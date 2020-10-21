@@ -8,9 +8,9 @@ The workflow is summarized in Fig 1:
 
 The main script `refeval_main.sh` runs different external dependencies.
 
-All required programs should be in $PATH. The required scripts, "codeml.ctl" file, and folders "ffn" and "gff" containing annotation files should be placed in the same directory where `refeval_main.sh` is executed.
+All required programs should be in $PATH. The required custom scripts, "codeml.ctl" file, and folders "ffn" and "gff" containing annotation files should be placed in the same directory where `refeval_main.sh` is executed.
 
-### Required software
+### Software
 * bwa
 * samtools
 * bcftools
@@ -24,7 +24,7 @@ All required programs should be in $PATH. The required scripts, "codeml.ctl" fil
 * LDhat
 * Phi (PhiPack)
 
-### Required scripts
+### Scripts
 Python and R scripts are available at https://github.com/cvmullor/reference. 'xmfa2fasta.pl' is available at https://github.com/kjolley/seq_scripts
   
 * change_cns_header.py
@@ -37,14 +37,14 @@ Python and R scripts are available at https://github.com/cvmullor/reference. 'xm
 * stats.R
 * xmfa2fasta.pl
 
-### Required Python libraries
+### Python libraries
 * Biopython
 
-### Required R libraries
+### R libraries
 * ggplot2
 * dplyr
 
-### Required files
+### Files
 * Prokka annotation (FFN) of reference sequences
 * Prokka annotation (GFF) of reference sequences
 * codeml.ctl
