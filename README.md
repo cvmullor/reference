@@ -11,7 +11,7 @@ The main script `refeval_main.sh` runs different external dependencies.
 All required programs should be in $PATH. The required custom scripts, "codeml.ctl" file, and folders "ffn" and "gff" containing annotation files should be placed in the same directory where `refeval_main.sh` is executed.
 
 ### Software
-* bwa
+* BWA
 * samtools
 * bcftools
 * progressiveMauve
