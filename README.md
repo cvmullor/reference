@@ -119,9 +119,6 @@ Required files:
         codeml.ctl
 ```
 
-All required programs should be in $PATH. The required scripts, as well as folders "ffn" and "gff" containing annotation files and "codeml.ctl", should be placed in the same folder where `refeval_main.sh` is executed. 
-
-
 ### `-r` (references)
 Path to the folder containing the reference sequences (in fasta/fna format) that will be used for read mapping.
 
