@@ -1,8 +1,6 @@
 # Evaluation of the effect of reference choice on mapping
 Pipeline for the evaluation of the effect of reference choice on short-read mapping as performed in the work *One is not enough: on the effects of reference genome for the mapping and subsequent analyses of short-reads. BioRxiv [Preprint]. 2020*. Available from: [https://doi.org/10.1101/2020.04.14.041004](https://www.biorxiv.org/content/10.1101/2020.04.14.041004v1).
 
-`refeval_main.sh` executes all the analyses carried out in this work.
-
 The workflow is summarized in Fig 1:
 ![Fig 1](Fig1_overview.png)
 
@@ -49,6 +47,20 @@ Python and R scripts are available at https://github.com/cvmullor/reference
 * Prokka annotation (FFN) of reference sequences
 * Prokka annotation (GFF) of reference sequences
 * codeml.ctl
+
+## Usage
+
+### Quick run
+
+`refeval_main.sh` runs all the steps performed in the work (mapping, variant calling and filtering, consensus sequence, mapping statistics, alignment, tree inference and comparison, compute dN/dS, compute recombination rates, plotting and performing statistical tests) by providing the path to a directory containing >=1 reference sequences (FASTA) and to paired-end reads (FASTQ).
+
+`./refeval_main.sh -r references/ -s reads/`
+
+### Quality control
+
+To filter and trim low-quality reads, a FASTA file containing adapters to be removed should be supplied.
+
+`./refeval_main.sh -r references/ -s reads/ -q adapters.fasta`
 
 ## Options
 
