@@ -71,7 +71,7 @@ Usage: ./refeval_main.sh [-hd] -r <path/to/references> -s <path/to/reads> [-t th
 Options:
  -r       path to the folder that contains the reference sequences (FASTA) for mapping
  -s       path to the folder that contains the reads (FASTQ) to be mapped
- -t       number of threads to be used during mapping
+ -t       number of threads to be used during mapping. Default: 1
  -q       path to file with adapters to be removed during read quality
           processing. If no file is provided, QC step will not be performed
  -h       this help message
