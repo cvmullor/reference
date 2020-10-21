@@ -123,7 +123,7 @@ Required files:
 Path to the folder containing the reference sequences (in fasta/fna format) that will be used for read mapping.
 
 ### `-s` (samples)
-Path to the folder containing the reads (in fastq format) that will be mapped against the different references.
+Path to the folder containing the paired-end reads (in fastq format) that will be mapped against the different references.
 
 ### `-t` (threads) [optional]
 Number of threads that BWA MEM will use for mapping step. Default: 1
