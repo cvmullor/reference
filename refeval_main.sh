@@ -18,7 +18,7 @@ function print_usage {
     echo "Options:"
     echo " -r       path to the folder that contains the reference sequences (FASTA) for mapping"
     echo " -s       path to the folder that contains the reads (FASTQ) to be mapped"
-    echo " -t       number of threads to be used during mapping"
+    echo " -t       number of threads to be used during mapping. Default: 1"
     echo -e " -q       path to file with adapters to be removed during read quality\n\t  processing. If no file is provided, QC step will not be performed"
     echo " -h       this help message"
     echo " -d       required dependencies and files"
