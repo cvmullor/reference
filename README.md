@@ -51,13 +51,13 @@ Python and R scripts are available at https://github.com/cvmullor/reference. 'xm
 
 ### Quick run
 
-`refeval_main.sh` runs all the steps performed in the work (mapping, variant calling and filtering, consensus sequence, mapping statistics, alignment, tree inference and comparison, compute dN/dS, compute recombination rates, plotting and performing statistical tests) by providing the path to a directory containing >=1 reference sequences (FASTA) and to paired-end reads (FASTQ).
+`refeval_main.sh` runs all the steps performed in the work (mapping, variant calling and filtering, consensus sequence, mapping statistics, alignment, tree inference and comparison, compute dN/dS, compute recombination rates, plotting and performing statistical tests) by providing the path to a directory containing >=1 reference sequences (FASTA) and the path to paired-end reads (FASTQ).
 
 `./refeval_main.sh -r references/ -s reads/`
 
 ### Quality control
 
-To filter and trim low-quality reads, a FASTA file containing adapters to be removed should be supplied.
+To filter and trim low-quality reads, a FASTA file containing adapter sequences to be removed should be supplied.
 
 `./refeval_main.sh -r references/ -s reads/ -q adapters.fasta`
 
