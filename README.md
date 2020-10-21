@@ -6,7 +6,9 @@ The workflow is summarized in Fig 1:
 
 ## Dependencies
 
-The main script (`refeval_main.sh`) depends on different external dependencies. All required programs should be in $PATH. The required scripts, "codeml.ctl" file, and folders "ffn" and "gff" containing annotation files should be placed in the same directory where `refeval_main.sh` is executed.
+The main script `refeval_main.sh` runs different external dependencies.
+
+All required programs should be in $PATH. The required scripts, "codeml.ctl" file, and folders "ffn" and "gff" containing annotation files should be placed in the same directory where `refeval_main.sh` is executed.
 
 ### Required software
 * bwa
@@ -51,13 +53,13 @@ Python and R scripts are available at https://github.com/cvmullor/reference. 'xm
 
 ### Quick run
 
-`refeval_main.sh` runs all the steps performed in the work (mapping, variant calling and filtering, consensus sequence, mapping statistics, alignment, tree inference and comparison, compute dN/dS, compute recombination rates, plotting and performing statistical tests) by providing the path to a directory containing >=1 reference sequences (FASTA) and the path to paired-end reads (FASTQ).
+`refeval_main.sh` runs all the analyses performed in the work by providing the path to a directory containing >=1 reference sequences (FASTA) and the path to paired-end reads (FASTQ).
 
 `./refeval_main.sh -r references/ -s reads/`
 
 ### Quality control
 
-To filter and trim low-quality reads, a FASTA file containing adapter sequences to be removed should be supplied.
+To filter and trim low-quality reads, it should be supplied a FASTA file containing adapter sequences to be removed.
 
 `./refeval_main.sh -r references/ -s reads/ -q adapters.fasta`
 
@@ -120,13 +122,13 @@ Required files:
 ```
 
 ### `-r` (references)
-Path to the folder containing the reference sequences (in fasta/fna format) that will be used for read mapping.
+Path to the folder containing the reference sequences (in FASTA format) that will be used for read mapping.
 
 ### `-s` (samples)
-Path to the folder containing the paired-end reads (in fastq format) that will be mapped against the different references.
+Path to the folder containing the paired-end reads (in FASTQ format) that will be mapped against the different references.
 
 ### `-t` (threads) [optional]
-Number of threads that BWA MEM will use for mapping step. Default: 1
+Number of threads that BWA MEM will use for mapping. Default: 1
 
 ### `-q` (quality control) [optional]
 Path to the file containing the adapters to be removed during read quality processing. Quality trimming and filtering will also be performed.
