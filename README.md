@@ -165,3 +165,6 @@ Usage is detailed in the header section of each script.
 
 `stats.R`: get summary statistics of all the parameters. Perform Kruskal-Wallis and Wilcoxon tests (for mapping statsitics and dN/dS), and pairwise Kolmogorov-Smirnov tests (for rho distributions)
 
+## Citation
+Carlos Valiente-Mullor, Beatriz Beamud, Iván Ansari, Carlos Francés-Cuesta, Neris García-González, Lorena Mejía, Paula Ruiz-Hueso, Fernando González-Candelas. 2020. One is not enough: on the effects of reference genome for the mapping and subsequent analyses of short-reads. bioRxiv 2020.04.14.041004; doi: https://doi.org/10.1101/2020.04.14.041004 
+
