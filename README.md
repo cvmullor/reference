@@ -4,6 +4,8 @@ Pipeline for the evaluation of the effect of reference choice on short-read mapp
 The workflow is summarized in Fig 1:
 ![Fig 1](Fig1_overview.png)
 
+As a working example, sequences and annotation files of four *Serratia marcescens* references are provided in "test" directory. Example fastq files are too big to be uploaded, but they can be downloaded from BioProjects [PRJEB5065](https://www.ebi.ac.uk/ena/browser/view/PRJEB5065) and [PRJNA231221](https://www.ebi.ac.uk/ena/browser/view/PRJNA231221) and copied in "/test/serratia_reads/".
+
 ## Dependencies
 
 The main script `refeval_main.sh` runs different external dependencies.
