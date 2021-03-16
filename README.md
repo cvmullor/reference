@@ -1,5 +1,5 @@
 # Evaluation of the effect of reference choice on mapping
-Pipeline for the evaluation of the effect of reference choice on short-read mapping as performed in the work *One is not enough: on the effects of reference genome for the mapping and subsequent analyses of short-reads. BioRxiv [Preprint]. 2020*. Available from: [https://doi.org/10.1101/2020.04.14.041004](https://www.biorxiv.org/content/10.1101/2020.04.14.041004v1).
+Pipeline for the evaluation of the effect of reference choice on short-read mapping as performed in the work *One is not enough: on the effects of reference genome for the mapping and subsequent analyses of short-reads. PLoS Comput. Biol. (2021)*. Available from: [ https://doi.org/10.1371/journal.pcbi.1008678](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008678).
 
 The workflow is summarized in Fig 1:
 ![Fig 1](Fig1_overview.png)
